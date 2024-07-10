@@ -1,0 +1,61 @@
+@import url('global.css');
+
+.contenido {
+    padding: 2rem;
+}
+
+.galeria {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.galeria-item1, .galeria-item2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+}
+
+.galeria-item1 {
+    background-color: #f0f0f0;
+}
+
+.galeria-item2 {
+    background-color: #e0e0e0;
+}
+
+.galeria-item1:hover, .galeria-item2:hover {
+    transform: scale(1.25);
+}
+
+.galeria-imagen {
+    width: 10rem;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.galeria-item:hover .galeria-imagen {
+    transform: scale(1.25);
+}
+
+.galeria_texto {
+    display: flex;
+    flex-direction: column;
+}
+
+.galeria-titulo {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.galeria-descripcion {
+    font-size: 1rem;
+    color: #666;
+    margin: auto;
+    flex: 1;
+}

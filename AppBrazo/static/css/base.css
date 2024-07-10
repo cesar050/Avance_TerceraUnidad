@@ -1,0 +1,59 @@
+@import url('global.css');
+
+.header{
+    background-color:var(--blanco);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.logo{
+    text-decoration: none;
+    color: var(--primario);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+
+}
+.logo_img{
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    flex-direction: row;
+    margin: 1.5rem;
+    border-radius: 50%;
+
+}
+
+.Titulo{
+    font-size: 4rem;
+}
+
+.navegacion{
+    font-size: 2rem;
+    font-family: 'Lucida Grande', Arial, sans-serif;
+    padding: 5rem
+
+
+}
+a.enlace{
+    text-decoration: none;
+    color: var(--primario);
+    transition: color 0.03s;
+    padding: 3rem;
+
+}
+.enlace:hover  {
+    background-color: var(--primario);
+    color: var(--blanco);
+
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}

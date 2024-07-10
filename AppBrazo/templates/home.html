@@ -1,0 +1,21 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <body>
+    <div class="contenido">
+        <div class="contenedor_img">
+            <div class="titulo_background">
+                <h1>BotZilla</h1>
+            </div>
+            <img class="background_img" src="{% static 'imagenes/imgBackground.jpg' %}" alt="imagen de fondo" >
+        </div>
+
+        <div class="resumen">
+            <h2>Nuestra Historia</h2>
+            <p>BotZilla es una empresa que se dedica a la creación de robots de todo tipo, desde robots de limpieza hasta robots de combate. Nuestros robots son los mejores del mercado y son capaces de realizar cualquier tarea que se les asigne. Nuestros robots son diseñados por un equipo de ingenieros altamente capacitados y son fabricados con los mejores materiales para garantizar su durabilidad y eficiencia. En BotZilla estamos comprometidos con la calidad y la innovación, por eso estamos constantemente investigando y desarrollando nuevos modelos de robots para satisfacer las necesidades de nuestros clientes. Si estás buscando un robot de alta calidad y rendimiento, no dudes en contactar con nosotros.</p>
+        </div>
+    </div>
+    </body>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+
+<head>
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/inicioSecion.css' %}">
+</head>
+<body>
+<div class="container">
+    <h2>Iniciar Sesión</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="button-container">
+            <input type="submit" value="Iniciar Sesión">
+            <a href="{% url 'CrearUsuario' %}">
+                <input type="button" value="Crear Usuario">
+            </a>
+            <a href="{% url 'home' %}">
+                <input type="button" value="Home">
+            </a>
+        </div>
+    </form>
+</div>
+</body>

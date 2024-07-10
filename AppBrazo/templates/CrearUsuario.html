@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear Usuario</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/EstiloCrearUsuario.css' %}"></head>
+</head>
+<body>
+<h2>Crear Usuario</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Registrar">
+    <a href="{% url 'InicioSesion' %}">
+        <input type="button"  value="Iniciar Sesion">
+    </a>
+</form>
+</body>
+</html>

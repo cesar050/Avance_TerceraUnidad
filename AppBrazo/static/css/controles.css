@@ -1,0 +1,131 @@
+/* controles.css */
+
+.contenedor-aplicacion {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #e0f7fa; /* Turquesa */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-aplicacion h1 {
+    font-size: 2rem;
+    color: #004d40; /* Verde oscuro */
+    text-align: center;
+}
+
+.contenedor-aplicacion p {
+    font-size: 1.2rem;
+    color: #00796b; /* Verde medio */
+    text-align: center;
+}
+
+.contenedor-video {
+    margin-top: 20px;
+    padding: 10px; /* Espacio alrededor del contenedor de video */
+    background-color: #b2ebf2; /* Turquesa claro */
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.panel-control {
+    margin-top: 20px;
+}
+
+.slider-camara, .control-carro, .control-brazo {
+    margin-bottom: 20px;
+}
+
+.slider-camara label, .control-brazo label {
+    display: block;
+    font-size: 1.2rem;
+    color: #004d40; /* Verde oscuro */
+    margin-bottom: 5px;
+}
+
+.slider, .boton {
+    margin-top: 5px;
+}
+
+.boton {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #009688; /* Turquesa oscuro */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #00796b; /* Turquesa medio */
+}
+
+.contenedor-slider {
+    margin-bottom: 10px;
+}
+
+.slider {
+    width: 100%;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #004d40; /* Verde oscuro */
+    margin-bottom: 10px;
+}
+
+/* Estilos específicos para los rangos (sliders) */
+.slider-camara input[type=range], .control-brazo input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    background: #b2ebf2; /* Turquesa claro */
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.15s ease-in-out;
+    border-radius: 5px;
+}
+
+.slider-camara input[type=range]:hover, .control-brazo input[type=range]:hover {
+    opacity: 1;
+}
+
+.slider-camara input[type=range]::-webkit-slider
+
+-thumb, .control-brazo input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #4CAF50;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.slider-camara input[type=range]::-moz-range-thumb, .control-brazo input[type=range]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #4CAF50;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/* Estilos específicos para las etiquetas de valor */
+.contenedor-slider span {
+    font-size: 1rem;
+    color: #666;
+    margin-left: 5px;
+}

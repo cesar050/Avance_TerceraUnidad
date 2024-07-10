@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Title{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <a class="logo" href="{% url 'home' %}">
+        <img class="logo_img" src="{% static 'imagenes/logo.jpeg' %}" alt="Logo">
+
+        <h1 class="Titulo">BOT<span class="logo__bold">ZILLA</span></h1>
+    </a>
+    <nav class="navegacion">
+        <a class="enlace" href="{% url 'home' %}">Inicio</a>
+        <a class="enlace" href="{% url 'Controles' %}">Control</a>
+        <a class="enlace" href="{% url 'Materiales' %}">Estadísticas</a>
+        <a class="enlace" href="{% url 'InicioSesion' %}">Mi cuenta</a>
+    
+    </nav>
+</header>
+
+<main class="content">
+    {% block content %}{% endblock %}
+</main>
+
+<footer class="footer">
+    <p>Botzilla 2024</p>
+</footer>
+</body>
+</html>

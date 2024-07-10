@@ -1,0 +1,15 @@
+:root{
+    --primario: #438faf;
+    --secundario: #388f8f;
+    --blanco: #fff;
+    --gris: #333;
+    --negro: #000000;
+}
+html{
+    box-sizing: border-box;
+    font-size: 10px;
+
+}
+h2{
+    color:var(--gris);
+}
