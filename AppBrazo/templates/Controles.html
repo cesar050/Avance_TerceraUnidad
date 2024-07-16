@@ -2,55 +2,55 @@
 {% load static %}
 {% block content %}
     <link rel="stylesheet" href="{% static 'css/controles.css' %}">
-    <div class="contenedor-aplicacion">
-        <h1>Provisional</h1>
-        <p>Esta es una página provisional</p>
-        <div class="contenedor-video">
-            <img id="video" src="http://192.168.0.16:81/stream" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></img>
+
+    <div class="app_container">
+        <div class="video_container">
+            <img id="video" src="http://192.168.0.16:81/stream" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
         </div>
-        <div class="panel-control">
-            <div class="contenedor-cambio">
-                <button id="btn-cambiar" class="boton">Cambiar</button>
+        <div class="control_panel">
+            <div class="cambio_container">
+                <button id="btn_change" class="button">Cambiar</button>
             </div>
-            <div class="slider-camara">
-                <label for="camara">Cámara</label>
+            <div class="slider_camara">
+                <label for="camara">Camara</label>
                 <input type="range" id="camara" class="slider" min="0" max="180" value="90">
-                <span id="valor-camara">90</span>
+                <span id="valor_camara">90</span>
             </div>
-            <div class="control-carro">
-                <button id="btn-arriba" class="boton">Arriba</button>
-                <button id="btn-abajo" class="boton">Abajo</button>
-                <button id="btn-izquierda" class="boton">Izquierda</button>
-                <button id="btn-derecha" class="boton">Derecha</button>
+            <div class="control_carro">
+                <button id="btn_front" class="button">Arriba</button>
+                <button id="btn_rear" class="button">Abajo</button>
+                <button id="btn_left" class="button">Izquierda</button>
+                <button id="btn_rigth" class="button">Derecha</button>
             </div>
-            <h2>Control de Servos con ESP32</h2>
-            <div class="control-brazo">
-                <div class="contenedor-slider">
-                    <label for="base-brazo">Base</label>
-                    <input type="range" id="base-brazo" class="slider" min="0" max="180" value="90" step="5">
-                    <span id="valor-base-brazo">90</span>
+            <div class="control_brazo">
+                <div class="slider_continer">
+                    <label for="base_brazo">Base</label>
+                    <input type="range" id="base_brazo" class="slider" min="0" max="180" value="90">
+                    <span id="valor_base_brazo">90</span>
                 </div>
-                <div class="contenedor-slider">
-                    <label for="brazo-brazo">Brazo</label>
-                    <input type="range" id="brazo-brazo" class="slider" min="0" max="180" value="90" step="5">
-                    <span id="valor-brazo-brazo">90</span>
+                <div class="slider_continer">
+                    <label for="hombro_brazo">Hombro</label>
+                    <input type="range" id="hombro_brazo" class="slider" min="0" max="180" value="90">
+                    <span id="valor_hombro_brazo">90</span>
                 </div>
-                <div class="contenedor-slider">
-                    <label for="codo-brazo">Codo</label>
-                    <input type="range" id="codo-brazo" class="slider" min="0" max="180" value="90" step="5">
-                    <span id="valor-codo-brazo">90</span>
+                <div class="slider_continer">
+                    <label for="codo_brazo">Codo</label>
+                    <input type="range" id="codo_brazo" class="slider" min="0" max="180" value="90">
+                    <span id="valor_codo_brazo">90</span>
                 </div>
-                <div class="contenedor-slider">
-                    <label for="muneca-brazo">Muñeca</label>
-                    <input type="range" id="muneca-brazo" class="slider" min="0" max="180" value="90" step="5">
-                    <span id="valor-muneca-brazo">90</span>
+                <div class="slider_continer">
+                    <label for="muneca_brazo">Muñeca</label>
+                    <input type="range" id="muneca_brazo" class="slider" min="0" max="180" value="90">
+                    <span id="valor_muneca_brazo">90</span>
                 </div>
-                <div class="contenedor-slider">
-                    <label for="pinza-brazo">Pinza</label>
-                    <input type="range" id="pinza-brazo" class="slider" min="0" max="120" value="45" step="3">
-                    <span id="valor-pinza-brazo">45</span>
+                <div class="slider_continer">
+                    <label for="pinza_brazo">Pinza</label>
+                    <input type="range" id="pinza_brazo" class="slider" min="0" max="90" value="45">
+                    <span id="valor_pinza_brazo">45</span>
                 </div>
             </div>
         </div>
+    </div>
+    <script src="{% static 'script/controles.js' %}"></script>
     </div>
 {% endblock %}
