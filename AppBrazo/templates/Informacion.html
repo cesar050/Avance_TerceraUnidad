@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+    <h2>Proyecto</h2>
+
+    <div class="contenedor">
+        <a href="{% url 'Integrantes' %}" class="tab-link" id="tab-integrantes">
+            <h3>Integrantes</h3>
+        </a>
+        <p>Detalles sobre los integrantes del proyecto.</p>
+    </div>
+
+    <div class="contenedor">
+        <a href="{% url 'Documentacion' %}" class="tab-link" id="tab-documentacion">
+            <h3>Documentación</h3>
+        </a>
+        <p>Detalles sobre la documentación del proyecto.</p>
+    </div>
+
+    <div class="contenedor">
+        <a href="{% url 'Materiales' %}" class="tab-link" id="tab-materiales">
+            <h3>Materiales</h3>
+        </a>
+        <p>Detalles sobre los materiales utilizados en el proyecto.</p>
+    </div>
+
+    <div class="contenedor">
+        <a href="{% url 'MasInfo' %}" class="tab-link" id="tab-acerca-de">
+            <h3>Acerca de</h3>
+        </a>
+        <p>Detalles sobre el proyecto.</p>
+    </div>
+
+{% endblock %}

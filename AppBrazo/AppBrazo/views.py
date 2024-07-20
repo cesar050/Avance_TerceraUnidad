@@ -38,8 +38,5 @@ def CrearUsuario(request):
 
 def home(request):
     return render(request, 'home.html')
-def Materiales(request):
-    return render(request, 'Materiales.html')
-def Controles(request):
-    return render(request, 'Controles.html')
+
 

@@ -1,56 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-    <link rel="stylesheet" href="{% static 'css/controles.css' %}">
-
-    <div class="app_container">
-        <div class="video_container">
-            <img id="video" src="http://192.168.0.16:81/stream" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-        </div>
-        <div class="control_panel">
-            <div class="cambio_container">
-                <button id="btn_change" class="button">Cambiar</button>
-            </div>
-            <div class="slider_camara">
-                <label for="camara">Camara</label>
-                <input type="range" id="camara" class="slider" min="0" max="180" value="90">
-                <span id="valor_camara">90</span>
-            </div>
-            <div class="control_carro">
-                <button id="btn_front" class="button">Arriba</button>
-                <button id="btn_rear" class="button">Abajo</button>
-                <button id="btn_left" class="button">Izquierda</button>
-                <button id="btn_rigth" class="button">Derecha</button>
-            </div>
-            <div class="control_brazo">
-                <div class="slider_continer">
-                    <label for="base_brazo">Base</label>
-                    <input type="range" id="base_brazo" class="slider" min="0" max="180" value="90">
-                    <span id="valor_base_brazo">90</span>
-                </div>
-                <div class="slider_continer">
-                    <label for="hombro_brazo">Hombro</label>
-                    <input type="range" id="hombro_brazo" class="slider" min="0" max="180" value="90">
-                    <span id="valor_hombro_brazo">90</span>
-                </div>
-                <div class="slider_continer">
-                    <label for="codo_brazo">Codo</label>
-                    <input type="range" id="codo_brazo" class="slider" min="0" max="180" value="90">
-                    <span id="valor_codo_brazo">90</span>
-                </div>
-                <div class="slider_continer">
-                    <label for="muneca_brazo">Muñeca</label>
-                    <input type="range" id="muneca_brazo" class="slider" min="0" max="180" value="90">
-                    <span id="valor_muneca_brazo">90</span>
-                </div>
-                <div class="slider_continer">
-                    <label for="pinza_brazo">Pinza</label>
-                    <input type="range" id="pinza_brazo" class="slider" min="0" max="90" value="45">
-                    <span id="valor_pinza_brazo">45</span>
-                </div>
-            </div>
-        </div>
-    </div>
+    <form id="sliderForm">
+        <label for="pinza_brazo">Control de la pinza del brazo</label>
+        <input type="range" id="pinza_brazo" name="pinza_brazo" min="0" max="100">
+    </form>
     <script src="{% static 'script/controles.js' %}"></script>
-    </div>
 {% endblock %}
