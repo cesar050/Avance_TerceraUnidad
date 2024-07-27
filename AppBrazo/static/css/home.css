@@ -1,3 +1,4 @@
+
 .contenedor_img {
     position: relative;
     width: 100%;
@@ -35,7 +36,7 @@
     z-index: 0;
 }
 .resumen{
-     background-color: var(--primario);
+    background-color: var(--primario);
     color: var(--blanco);
     padding: 2rem;
     border:  solid ;
@@ -44,6 +45,32 @@
     font-size: 1.2rem;
     line-height: 1.5;
 }
-h2{
-    color:var(--gris);
+.resumen p, h2{
+    font-family: sans-serif;
 }
+.resumen h2{
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.resumen p{
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+footer, p {
+    font-family: sans-serif;
+    font-size: 1rem; /* Tamaño de fuente ajustado para móviles */
+}
+.footer{
+    width: 100vw;
+    border: 1px solid #333;
+    border-radius: 3px;
+}
+@media screen and (min-width: 768px) {
+    .nav-content {
+        display: none;
+        width: 100vw;
+    }
+}
+
