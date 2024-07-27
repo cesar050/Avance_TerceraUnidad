@@ -1,10 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
+{% load static %}
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Integrantes de Botzilla</title>
+    <link rel="stylesheet" href="{% static 'css/integrantes.css' %}">
 </head>
 <body>
+    <div class="h1-contenedor">
+        <h1>Integrantes de Botzilla</h1>
+    </div>
+    <nav class="nav-container">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="../">Regresar</a></li>
+        </ul>
+    </nav>
 
+    <div class="tarjeta-container">
+        <div class="tarjeta">
+            <img class="img-tarjeta" src="{% static 'imagenes/negro.jpeg' %}" alt="Alexis Jara">
+            <div class="tarjeta-content">
+                <h2>Alexis Jara</h2>
+                <p>Estudiante de Ingeniería en Sistemas Computacionales en la Universidad Nacional de Loja
+                    Especialista en backend
+                </p>
+            </div>
+        </div>
+
+        <div class="tarjeta">
+            <img class="img-tarjeta" src="{% static 'imagenes/negro.jpeg' %}" alt="David Toledo">
+            <div class="tarjeta-content">
+                <h2>David Toledo</h2>
+                <p>Estudiante de Ingeniería en Sistemas Computacionales en la Universidad Nacional de Loja
+                    Especialista en diseños 3D
+                </p>
+            </div>
+        </div>
+
+        <div class="tarjeta">
+            <img class="img-tarjeta" src="{% static 'imagenes/negro.jpeg' %}" alt="Marco Buri">
+            <div class="tarjeta-content">
+                <h2>Marco Buri</h2>
+                <p>Estudiante de Ingeniería en Sistemas Computacionales en la Universidad Nacional de Loja
+                    Dice que los colores de Alexis son feos
+                    Especialista en backend
+                </p>
+            </div>
+        </div>
+
+        <div class="tarjeta">
+            <img class="img-tarjeta" src="{% static 'imagenes/Ramos.jpg' %}" alt="Cesar Ramos">
+            <div class="tarjeta-content">
+                <h2>Cesar Ramos</h2>
+                <p>Estudiante de Ingeniería en Sistemas Computacionales en la Universidad Nacional de Loja
+                    Especialista en login
+                </p>
+            </div>
+        </div>
+
+        <div class="tarjeta">
+            <img class="img-tarjeta" src="{% static 'imagenes/yo.jpg' %}" alt="Stif">
+            <div class="tarjeta-content">
+                <h2>Stif</h2>
+                <p>Estudiante de Ingeniería en Sistemas Computacionales en la Universidad Nacional de Loja
+                    Tiene salud
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

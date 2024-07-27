@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9212298e-45ea-45a1-b20c-e40b1a2e70c6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Avance_TerceraUnidad.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppBrazo/static/css/integrantes.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppBrazo/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/AppBrazo/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppBrazo/static/css/materiales.css" beforeDir="false" afterPath="$PROJECT_DIR$/AppBrazo/static/css/materiales.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppBrazo/templates/INFO/Documentacion.html" beforeDir="false" afterPath="$PROJECT_DIR$/AppBrazo/templates/INFO/Documentacion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppBrazo/templates/INFO/Integrantes.html" beforeDir="false" afterPath="$PROJECT_DIR$/AppBrazo/templates/INFO/Integrantes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppBrazo/templates/INFO/Materiales.html" beforeDir="false" afterPath="$PROJECT_DIR$/AppBrazo/templates/INFO/Materiales.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppBrazo/templates/Informacion.html" beforeDir="false" afterPath="$PROJECT_DIR$/AppBrazo/templates/Informacion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppBrazo/templates/InicioSecion.html" beforeDir="false" afterPath="$PROJECT_DIR$/AppBrazo/templates/InicioSecion.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2jWdz7txONPLys6oto79o5XljjB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;featureStif&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/cesar/OneDrive/Desktop/U/SEGUNDO CICLO/POO/Api/Avance_TerceraUnidad/AppBrazo/static/imagenes&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\cesar\OneDrive\Desktop\U\SEGUNDO CICLO\POO\Api\Avance_TerceraUnidad\AppBrazo\static\imagenes" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\cesar\OneDrive\Desktop\U\SEGUNDO CICLO\POO\Api\Avance_TerceraUnidad\AppBrazo\static\imagenes" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PY-241.15989.155" />
+        <option value="bundled-python-sdk-babbdf50b680-7c6932dee5e4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.155" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9212298e-45ea-45a1-b20c-e40b1a2e70c6" name="Changes" comment="" />
+      <created>1721507026843</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1721507026843</updated>
+      <workItem from="1721507027916" duration="669000" />
+      <workItem from="1721507707850" duration="138000" />
+      <workItem from="1721507991012" duration="7509000" />
+      <workItem from="1721832130580" duration="5724000" />
+      <workItem from="1721854537179" duration="6282000" />
+      <workItem from="1721860966062" duration="276000" />
+      <workItem from="1721869049355" duration="92000" />
+      <workItem from="1721911596524" duration="90000" />
+      <workItem from="1722004582638" duration="915000" />
+      <workItem from="1722051309649" duration="552000" />
+      <workItem from="1722099239424" duration="794000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
