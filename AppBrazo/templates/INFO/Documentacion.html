@@ -1,10 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
+{% load static %}
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Documentación</title>
+    <link rel="stylesheet" href="{% static 'css/documentacion.css' %}">
 </head>
 <body>
+    <div class="h1-contenedor">
+        <h1>Documentación</h1>
+    </div>
+    <nav class="nav-container">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#seccion-django">Django (Python)</a></li>
+            <li class="nav-item"><a href="#seccion-html">HTML</a></li>
+            <li class="nav-item"><a href="#seccion-css">CSS</a></li>
+            <li class="nav-item"><a href="#seccion-javascript">JavaScript</a></li>
+            <li class="nav-item"><a href="#seccion-sqlite">SQLite</a></li>
+            <li class="nav-item"><a href="../">Regresar</a></li>
+        </ul>
+    </nav>
+    <div class="seccion-container">
+        <section id="seccion-django">
+            <h2>Django (Python)</h2>
+            <p>
+                Django es un framework de desarrollo web de código abierto, escrito en Python, el cual utilizamos para la construcción del backend de nuestra aplicación.
+                Django nos permite gestionar las peticiones HTTP, las vistas, las plantillas, las bases de datos, los formularios, la autenticación de usuarios, entre otras cosas.
+            </p>
+        </section>
+        <section id="seccion-html">
+            <h2>HTML</h2>
+            <p>
+                HTML es un lenguaje de marcado que se utiliza para el desarrollo de páginas web.
+                HTML nos permite estructurar el contenido de una página web, mediante el uso de etiquetas.
+            </p>
+        </section>
 
+        <section id="seccion-css">
+            <h2>CSS</h2>
+            <p>
+                CSS es un lenguaje de estilos que se utiliza para darle estilo a las páginas web.
+                CSS nos permite modificar el color, la fuente, el tamaño, la posición, entre otras cosas, de los elementos de una página web.
+            </p>
+        </section>
+
+        <section id="seccion-javascript">
+            <h2>JavaScript</h2>
+            <p>
+                JavaScript es un lenguaje de programación que se utiliza para darle interactividad a las páginas web.
+                JavaScript nos permite modificar el contenido de una página web, mediante el uso de eventos y funciones.
+            </p>
+        </section>
+
+        <section id="seccion-sqlite">
+            <h2>SQLite</h2>
+            <p>
+                SQLite es un sistema de gestión de bases de datos relacionales, que se utiliza para almacenar la información de una aplicación.
+                SQLite es un sistema de gestión de bases de datos ligero, rápido y fácil de usar.
+            </p>
+        </section>
+    </div>
 </body>
 </html>
