@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Title{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,13 +17,19 @@
 
         <h1 class="Titulo">BOT<span class="logo__bold">ZILLA</span></h1>
     </a>
-    <nav class="navegacion">
-        <a class="enlace" href="{% url 'home' %}">Inicio</a>
-        <a class="enlace" href="{% url 'Controles' %}">Control</a>
-        <a class="enlace" href="{% url 'Informacion' %}">Acerca De</a>
-        <a class="enlace" href="{% url 'InicioSesion' %}">Mi cuenta</a>
-    
-    </nav>
+    <div class="nav-content">
+        <nav class="navegacion">
+            <a class="enlace" href="{% url 'home' %}">Inicio</a>
+            <a class="enlace" href="{% url 'Controles' %}">Control</a>
+            <a class="enlace" href="{% url 'Informacion' %}">Acerca De</a>
+            <a class="enlace" href="{% url 'InicioSesion' %}">Mi cuenta</a
+        </nav>
+    </div>
+    <div class="burger-menu" id="burgerMenu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+    </div>
 </header>
 
 <main class="content">
@@ -32,5 +39,27 @@
 <footer class="footer">
     <p>Botzilla 2024</p>
 </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const burgerMenu = document.getElementById('burgerMenu');
+        const navegacion = document.querySelector('.navegacion');
+
+        function toggleMenu() {
+            navegacion.classList.toggle('show');
+            burgerMenu.classList.toggle('active');
+        }
+
+        burgerMenu.addEventListener('click', function() {
+            toggleMenu();
+        });
+
+        document.addEventListener('click', function(event) {
+            if (navegacion.classList.contains('show') && !burgerMenu.contains(event.target) && !navegacion.contains(event.target)) {
+                toggleMenu();
+            }
+        });
+    });
+</script>
 </body>
+
 </html>
