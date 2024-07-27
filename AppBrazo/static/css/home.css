@@ -67,10 +67,25 @@ footer, p {
     border: 1px solid #333;
     border-radius: 3px;
 }
-@media screen and (min-width: 768px) {
-    .nav-content {
-        display: none;
+
+@media screen and (max-width: 600px) {
+    body{
         width: 100vw;
+        margin: 0;
+    }
+    .nav-content {
+        width: 100%;
+    }
+    .resumen{
+        background-color: var(--primario);
+        border-radius: 0;
+        margin: 0;
+        left: 0;
+        padding: 3rem;
+
+    }
+    .resumen>h2 {
+        font-size: 3rem;
     }
 }
 
