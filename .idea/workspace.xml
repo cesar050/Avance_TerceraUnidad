@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9212298e-45ea-45a1-b20c-e40b1a2e70c6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Avance_TerceraUnidad.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppBrazo/static/css/integrantes.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppBrazo/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/AppBrazo/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppBrazo/static/css/materiales.css" beforeDir="false" afterPath="$PROJECT_DIR$/AppBrazo/static/css/materiales.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppBrazo/templates/INFO/Documentacion.html" beforeDir="false" afterPath="$PROJECT_DIR$/AppBrazo/templates/INFO/Documentacion.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppBrazo/templates/INFO/Integrantes.html" beforeDir="false" afterPath="$PROJECT_DIR$/AppBrazo/templates/INFO/Integrantes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppBrazo/templates/INFO/Materiales.html" beforeDir="false" afterPath="$PROJECT_DIR$/AppBrazo/templates/INFO/Materiales.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppBrazo/templates/Informacion.html" beforeDir="false" afterPath="$PROJECT_DIR$/AppBrazo/templates/Informacion.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppBrazo/templates/InicioSecion.html" beforeDir="false" afterPath="$PROJECT_DIR$/AppBrazo/templates/InicioSecion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppBrazo/static/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/AppBrazo/static/css/home.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +80,7 @@
       <workItem from="1721911596524" duration="90000" />
       <workItem from="1722004582638" duration="915000" />
       <workItem from="1722051309649" duration="552000" />
-      <workItem from="1722099239424" duration="794000" />
+      <workItem from="1722099239424" duration="1150000" />
     </task>
     <servers />
   </component>
