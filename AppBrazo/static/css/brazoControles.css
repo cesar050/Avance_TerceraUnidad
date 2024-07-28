@@ -1,0 +1,23 @@
+#video-stream-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#video-stream {
+    width: 640px;  /* Ajusta esto a la anchura que desees */
+    height: 360px; /* Ajusta esto a la altura que desees */
+    border: 2px solid darkblue; /* Borde de 2px de grosor, sólido y de color negro */
+    background-color: darkblue; /* Color de fondo amarillo */
+    border-radius: 10px;
+}
+#reset {
+    float: right;
+     margin-bottom: 20px;
+
+}
+body {
+    background-color: #5D6D7E ;
+    color: #ffffff; /* Color del texto negro por defecto */
+}
+
+

@@ -7,8 +7,11 @@
 }
 
 body {
-    background-color: #f5f5f5;
-    color: #000; /* Color del texto negro por defecto */
+     /*background-image: url('../imagenes/fondo4.png'); /* aqui es para poner la imagen de fondo4 */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover;
+    background-color: gray;
+    color: #ffffff; /* Color del texto negro por defecto */
 }
 
 /* Header */
@@ -20,7 +23,7 @@ header {
 
 header h1 {
     margin: 0;
-    color: #000; /* Color del texto negro */
+    color: midnightblue; /* Color del texto negro */
 }
 
 /* Main Control Section */
@@ -44,8 +47,11 @@ header h1 {
 }
 
 #video-stream {
-    width: 100%;
-    height: auto;
+    width: 640px;  /* Ajusta esto a la anchura que desees */
+    height: 360px; /* Ajusta esto a la altura que desees */
+    border: 2px solid darkblue; /* Borde de 2px de grosor, sólido y de color negro */
+    background-color: darkblue; /* Color de fondo amarillo */
+    border-radius: 10px;
 }
 
 /* Controls Container */
@@ -71,7 +77,7 @@ header h1 {
 
 #camera-slider label,
 #camera-slider span {
-    color: #000; /* Color del texto negro */
+    color: white; /* Color del texto negro */
 }
 
 #camera-slider input[type="range"] {
@@ -88,7 +94,8 @@ header h1 {
 #control-container label {
     margin-top: 10px;
     font-weight: bold;
-    color: #000; /* Color del texto negro */
+    font-size: 20px;
+    color: white; /* Color del texto negro */
 }
 
 #control-container input[type="range"] {
@@ -99,7 +106,7 @@ header h1 {
     display: block;
     text-align: center;
     margin-top: 5px;
-    color: #000; /* Color del texto negro */
+    color: white; /* Color del texto negro */
 }
 
 /* Car Buttons */
@@ -111,7 +118,7 @@ header h1 {
 }
 
 #car-buttons button {
-    background-color: #4CAF50; /* Verde */
+    background-color: cadetblue; /* Verde */
     color: #000; /* Texto negro */
     border: none; /* Sin bordes */
     text-align: center; /* Texto centrado */
@@ -125,7 +132,7 @@ header h1 {
 }
 
 #car-buttons button:hover {
-    background-color: #45a049; /* Verde oscuro al pasar el mouse */
+    background-color: lightseagreen; /* Verde oscuro al pasar el mouse */
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); /* Sombra más pronunciada al pasar el mouse */
 }
 
@@ -232,7 +239,7 @@ header h1 {
 }
 
 #btn_front:hover, #btn_left:hover, #btn_rigth:hover, #btn_rear:hover {
-    background-color: #45a049; /* Verde oscuro al pasar el mouse */
+    background-color: dodgerblue; /* Verde oscuro al pasar el mouse */
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); /* Sombra más pronunciada al pasar el mouse */
 }
 
@@ -283,7 +290,7 @@ label, span {
 #btn_change {
     width: 80%; /* Ancho del botón */
     margin: auto 0;
-    background-color: #4CAF50; /* Verde */
+    background-color: cadetblue; /* Verde */
     color: #000; /* Texto negro */
     border: none; /* Sin bordes */
     text-align: center; /* Texto centrado */
@@ -301,3 +308,8 @@ label, span {
     background-color: #45a049; /* Verde oscuro al pasar el mouse */
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); /* Sombra más pronunciada al pasar el mouse */
 }
+
+input[type=range]::-webkit-slider-runnable-track {
+    background: midnightblue; /* Cambia esto al color que desees */
+}
+
