@@ -1,0 +1,11 @@
+#estadisticas-grafico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#grafico-container {
+    width: 80%;
+    margin-bottom: 20px;
+}
