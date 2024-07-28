@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
@@ -8,19 +7,17 @@
         <h1>Control</h1>
     </header>
 
-
     <section id="control">
         <div id="form-container">
             <form method="get" id="form-control">
                 <label for="esp32_ip">Dirección IP del ESP32:</label>
                 <input type="text" id="esp32_ip" name="esp32_ip" required>
                 <br>
-
             </form>
         </div>
         <div id="video-stream-container">
             <video id="video-stream" controls autoplay>
-                <source src=" https://www.youtube.com/watch?v=y9LlnLTH87U&ab_channel=CuartetodeNostype=">
+                <source src="https://www.youtube.com/watch?v=y9LlnLTH87U&ab_channel=CuartetodeNostype=">
                 Your browser does not support the video tag.
             </video>
         </div>
@@ -29,11 +26,9 @@
             <div id="vision-tools-container">
                 <div id="camera-container">
                     <div id="camera-slider">
+                        <label for="camera">Cámara:</label>
                         <input type="range" id="camera" name="camera" min="0" max="180" value="90">
                         <span id="anguloCam">{{ camera }}</span>
-                    </div>
-                    <div id="camera-buttons">
-
                     </div>
                 </div>
             </div>
@@ -77,6 +72,10 @@
                 <button id="reset" type="reset">Limpiar</button>
             </div>
         </div>
+        <div id="statistics-link">
+            <a href="{% url 'Estadisticas' %}" class="btn">Ver Estadísticas</a>
+        </div>
     </section>
     <script src="{% static 'script/controles.js' %}"></script>
 {% endblock %}
+

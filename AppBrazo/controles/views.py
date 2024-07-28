@@ -1,5 +1,9 @@
+import json
+
+from django.core.serializers.json import DjangoJSONEncoder
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
+from .models import ServoData
 import requests
 
 def Controles(request):
@@ -45,3 +49,22 @@ def Controles(request):
         return HttpResponse(response_message, content_type='text/plain')
 
     return render(request, 'Controles.html')
+
+def Estadisticas(request):
+    datos_servo = ServoData.objects.all().order_by('-timestamp')  # Ordenar por la fecha más reciente
+    context = {
+        'datos_servo': datos_servo,
+    }
+    return render(request, 'Estadisticas.html', context)
+
+def obtener_datos_servo(request):
+    # Obtener todos los datos de ServoData y ordenarlos por timestamp
+    datos_servo = ServoData.objects.all().order_by('-timestamp')
+
+    # Convertir los datos a un formato serializable en JSON
+    datos_serializados = list(datos_servo.values(
+        'timestamp', 'esp32_ip', 'base', 'hombro', 'codo', 'muneca', 'pinza',
+        'camera', 'forward', 'backward', 'left', 'right'
+    ))
+    # Devolver los datos como una respuesta JSON
+    return JsonResponse(datos_serializados, safe=False)

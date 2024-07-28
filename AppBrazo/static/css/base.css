@@ -3,6 +3,7 @@
 body{
     min-width: 950px;
     font-family: sans-serif;
+    height: 100vh;
 }
 .header{
     background-color:var(--blanco);
@@ -55,12 +56,13 @@ a.enlace{
 
 }
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #ffffff;
+    color: #1f8eba;
     text-align: center;
     margin: 0;
     padding: 20px 0;
     width: 100vw;
+    border-top: 1px solid var(--primario);
 }
 footer>p{
     font-family: sans-serif;
