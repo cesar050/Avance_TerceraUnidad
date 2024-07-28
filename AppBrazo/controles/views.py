@@ -1,47 +1,47 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 import requests
-from .models import ServoData
 
 def Controles(request):
-    esp32_ip = request.GET.get('esp32_ip', '')
+    esp32_ip = 'http://192.168.3.159'
 
     required_params = ['base', 'hombro', 'muneca', 'codo', 'pinza', 'camera', 'forward', 'backward', 'left', 'right']
 
-    if esp32_ip and all(param in request.GET for param in required_params):
-        params = {param: request.GET[param] for param in required_params}
+    modified_params = {param: request.GET[param] for param in required_params if param in request.GET and request.GET[param]}
 
-        port = '80'
-        url = f'http://{esp32_ip}:{port}/'
+    if modified_params:
+        query_string = '&'.join([f'{param}={value}' for param, value in modified_params.items()])
+        url = f'{esp32_ip}/?{query_string}'
+
         try:
-            response = requests.get(url, params=params)
+            response = requests.get(url)
             response.raise_for_status()
         except requests.exceptions.RequestException as e:
             return render(request, 'Controles.html', {
-                'error_message': f'Error en la conexión con el ESP32: {e}',
-                'esp32_ip': esp32_ip
+                'error_message': f'Error en la conexión con el ESP32: {e}'
             })
 
+        for param, value in modified_params.items():
+            print(f'Moviendo {param} a {value}')
+
         # Guardar los datos en la base de datos
+        from .models import ServoData
         ServoData.objects.create(
             esp32_ip=esp32_ip,
-            base=params['base'],
-            hombro=params['hombro'],
-            muneca=params['muneca'],
-            codo=params['codo'],
-            pinza=params['pinza'],
-            camera=params['camera'],
-            forward=params['forward'],
-            backward=params['backward'],
-            left=params['left'],
-            right=params['right']
+            base=modified_params.get('base', ''),
+            hombro=modified_params.get('hombro', ''),
+            muneca=modified_params.get('muneca', ''),
+            codo=modified_params.get('codo', ''),
+            pinza=modified_params.get('pinza', ''),
+            camera=modified_params.get('camera', ''),
+            forward=modified_params.get('forward', ''),
+            backward=modified_params.get('backward', ''),
+            left=modified_params.get('left', ''),
+            right=modified_params.get('right', '')
         )
 
-        return render(request, 'Controles.html', {
-            'success_message': 'Servomotores movidos',
-            'esp32_ip': esp32_ip
-        })
+        moved_params = ', '.join([f'{param}: {value}' for param, value in modified_params.items()])
+        response_message = f' {moved_params}'
+        return HttpResponse(response_message, content_type='text/plain')
 
-    # Renderizar la página de controles inicialmente
-    return render(request, 'Controles.html', {
-        'esp32_ip': esp32_ip
-    })
+    return render(request, 'Controles.html')
