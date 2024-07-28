@@ -2,6 +2,11 @@
 
 body {
     background-color: #f8f9fa;
+    width: 100vw;
+    margin: 0;
+}
+.header{
+    background: #f8f9fa;
 }
 
 .contenido {
@@ -61,7 +66,7 @@ body {
 
 .galeria-descripcion a {
     font-size: 1.25rem;
-    color: #ff0000;
+    color: #0056b3;
     text-decoration: none;
     transition: color 0.3s ease;
     display: inline-block;
@@ -70,4 +75,38 @@ body {
 
 .galeria-descripcion a:hover {
     color: #0056b3;
+}
+@media screen and (max-width: 600px) {
+    .galeria {
+        gap: 1rem;
+    }
+
+    .galeria-item1, .galeria-item2 {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .galeria-imagen {
+        width: 55%;
+        border-radius: 8px;
+        margin-top: 5px;
+
+    }
+
+    .galeria_texto {
+        padding: 1rem;
+    }
+    .footer{
+        width: 100%;
+        margin: 0;
+    }
+    .content{
+        width: 95%;
+        min-width: 370px;
+    }
+    .galeria-descripcion > a{
+        font-size: 1.5rem;
+        text-decoration: none;
+        onclick: none;
+    }
 }
