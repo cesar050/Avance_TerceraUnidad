@@ -1,4 +1,4 @@
-@import url('global.css');
+
 
 body {
     background-image: url("../imagenes/fondonegro.jpg");
@@ -13,7 +13,7 @@ body {
 }
 
 #form-container {
-    margin-right: auto;
+    margin-right: 20px;
 }
 
 #video-stream-container {
@@ -173,26 +173,26 @@ input[type=range]::-moz-range-thumb {
 
 #forward {
     position: relative;
-    top: -230px;
-    right: 1050px;
+    top: -210px;
+    right: 550px;
 }
 
 #backward {
     position: relative;
-    top: -165px;
-    right: 1050px;
+    top: -130px;
+    right: 550px;
 }
 
 #left {
     position: relative;
-    top: -395px;
-    right: 1115px;
+    top: -370px;
+    right: 625px;
 }
 
 #right {
     position: relative;
-    top: -319px;
-    right: 975px;
+    top: -295px;
+    right: 475px;
 }
 label {
     color: white; /* Color blanco para el texto */
@@ -202,8 +202,8 @@ label {
 
 #reset {
     position: absolute;
-    top: 360px; /* Ajusta según sea necesario */
-    right: -5px; /* Ajusta según sea necesario */
+    top: 450px; /* Ajusta según sea necesario */
+    right: 10px; /* Ajusta según sea necesario */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -218,5 +218,3 @@ label {
     top: 45px; /* Ajusta según sea necesario */
     left: 365px; /* Ajusta según sea necesario */
 }
-
-

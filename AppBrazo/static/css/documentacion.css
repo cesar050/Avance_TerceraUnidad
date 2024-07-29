@@ -20,6 +20,8 @@ h1 {
 .nav-container {
     background-color: #333;
     overflow: hidden;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays above other content */
 }
 
 .nav-list {
@@ -94,5 +96,74 @@ section {
 
 section:hover {
     transform: scale(1.05);
-    background-color: #d5c1a3;
+    background-color: #fff4c9;
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        width: 100vw;
+        margin: 0;
+    }
+    .h1-contenedor{
+        width: 100%;
+    }
+    h1 {
+        font-size: 2.2em;
+        color: #438faf;
+    }
+    .nav-container {
+        top: 80px;
+        position: fixed;
+        width: 100%;
+        transition: top 0.3s ease;
+        z-index: 1000;
+    }
+    .nav-item a {
+        padding: 14px 10px;
+    }
+    .nav-item a {
+        position: relative;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .nav-item a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        display: block;
+        margin-top: 5px;
+        right: 0;
+        background: #438faf;
+        transition: width 0.3s ease;
+        -webkit-transition: width 0.3s ease;
+    }
+
+    .nav-item a:hover::after {
+        width: 100%;
+        left: 0;
+        background: #30c9ea;
+    }
+
+    .nav-item a:hover {
+        color: #30c9ea;
+        transform: scale(1.05);
+        background: none;
+    }
+    .seccion-container{
+        margin-top:80px;
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+    }
+    .seccion{
+        width: 95%;
+        min-width: 300px;
+    }
+    .seccion:hover{
+    }
 }
