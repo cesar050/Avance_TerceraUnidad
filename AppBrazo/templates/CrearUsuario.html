@@ -3,17 +3,34 @@
 <html>
 <head>
     <title>Crear Usuario</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/EstiloCrearUsuario.css' %}"></head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/registro.css' %}">
+     <style>
+        body {
+            height: 100vh;
+            background: url('{% static "imagenes/fondo4.jpg" %}') no-repeat;
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
-<h2>Crear Usuario</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Registrar">
-    <a href="{% url 'InicioSesion' %}">
-        <input type="button"  value="Iniciar Sesion">
-    </a>
-</form>
+<div class="container">
+    <h2>Crear Usuario</h2>
+    <div class="form-container">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="button1" value="Registrar">
+            <div class="button-container">
+                <a href="{% url 'home' %}">
+                    <input type="button" class="button3" value="Home">
+                </a>
+                <a href="{% url 'InicioSesion' %}">
+                    <input type="button" class="button3" value="Iniciar Sesión">
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
 </body>
 </html>

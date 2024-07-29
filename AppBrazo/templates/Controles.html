@@ -6,6 +6,7 @@
 <h1>Control</h1>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+<<<<<<< HEAD
 <section id="control">
     <div id="form-container">
         <form method="get" id="form-control">
@@ -30,9 +31,35 @@
                 </div>
                 <div id="camera-buttons">
                     <!-- Puedes añadir botones aquí si lo necesitas -->
+=======
+    <section id="control">
+        <div id="form-container">
+            <form method="get" id="form-control">
+                <label for="esp32_ip">Dirección IP del ESP32:</label>
+                <input type="text" id="esp32_ip" name="esp32_ip" required>
+                <br>
+            </form>
+        </div>
+        <div id="video-stream-container">
+            <video id="video-stream" controls autoplay>
+                <source src="https://www.youtube.com/watch?v=y9LlnLTH87U&ab_channel=CuartetodeNostype=">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div id="controls-container">
+            <div id="vision-tools-container">
+                <div id="camera-container">
+                    <div id="camera-slider">
+                        <label for="camera">Cámara:</label>
+                        <input type="range" id="camera" name="camera" min="0" max="180" value="90">
+                        <span id="anguloCam">{{ camera }}</span>
+                    </div>
+>>>>>>> 6766c8351fd35e6b4a03a5c5676cb6ffa5342171
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
 
         <div id="control-container">
             <label for="base">Base:</label>
@@ -79,4 +106,12 @@
 </section>
 
 <script src="{% static 'script/controles.js' %}"></script>
+=======
+        <div id="statistics-link">
+            <a href="{% url 'Estadisticas' %}" class="btn">Ver Estadísticas</a>
+        </div>
+    </section>
+    <script src="{% static 'script/controles.js' %}"></script>
+>>>>>>> 6766c8351fd35e6b4a03a5c5676cb6ffa5342171
 {% endblock %}
+

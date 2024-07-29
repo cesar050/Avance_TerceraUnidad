@@ -1,8 +1,11 @@
 {% load static %}
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Documentación</title>
     <link rel="stylesheet" href="{% static 'css/documentacion.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <div class="h1-contenedor">
@@ -20,14 +23,14 @@
         </ul>
     </nav>
     <div class="seccion-container">
-        <section id="seccion-django">
+        <section class="seccion" id="seccion-django">
             <h2>Django (Python)</h2>
             <p>
                 Django es un framework de desarrollo web de código abierto, escrito en Python, el cual utilizamos para la construcción del backend de nuestra aplicación.
                 Django nos permite gestionar las peticiones HTTP, las vistas, las plantillas, las bases de datos, los formularios, la autenticación de usuarios, entre otras cosas.
             </p>
         </section>
-        <section id="seccion-html">
+        <section class="seccion" id="seccion-html">
             <h2>HTML</h2>
             <p>
                 HTML es un lenguaje de marcado que se utiliza para el desarrollo de páginas web.
@@ -35,7 +38,7 @@
             </p>
         </section>
 
-        <section id="seccion-css">
+        <section class="seccion" id="seccion-css">
             <h2>CSS</h2>
             <p>
                 CSS es un lenguaje de estilos que se utiliza para darle estilo a las páginas web.
@@ -43,7 +46,7 @@
             </p>
         </section>
 
-        <section id="seccion-javascript">
+        <section class="seccion" id="seccion-javascript">
             <h2>JavaScript</h2>
             <p>
                 JavaScript es un lenguaje de programación que se utiliza para darle interactividad a las páginas web.
@@ -51,14 +54,14 @@
             </p>
         </section>
 
-        <section id="seccion-sqlite">
+        <section class="seccion" id="seccion-sqlite">
             <h2>SQLite</h2>
             <p>
                 SQLite es un sistema de gestión de bases de datos relacionales, que se utiliza para almacenar la información de una aplicación.
                 SQLite es un sistema de gestión de bases de datos ligero, rápido y fácil de usar.
             </p>
         </section>
-        <section id="seccion-arduinoide">
+        <section class="seccion" id="seccion-arduinoide">
             <h2>ArduinoIDE</h2>
             <p>
                 ArduinoIDE es un entorno de desarrollo integrado, que se utiliza para programar las placas de Arduino.
@@ -66,5 +69,28 @@
             </p>
         </section>
     </div>
+<script>
+    window.addEventListener('scroll', function() {
+        const navContainer = document.querySelector('.nav-container');
+        if (window.scrollY > 0) {
+            navContainer.style.top = '0';
+        } else {
+            navContainer.style.top = '80px';
+        }
+    });
+    document.querySelectorAll('.nav-item a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        const offset = 80;
+
+        window.scrollTo({
+            top: targetElement.offsetTop - offset,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
 </body>
 </html>

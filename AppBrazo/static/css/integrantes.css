@@ -1,7 +1,12 @@
 * {
     font-family: sans-serif;
 }
-
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
 h1 {
     text-align: center;
     margin-top: 20px;
@@ -14,7 +19,7 @@ h1 {
     justify-content: center;
     width: 100%;
     height: 80px;
-    background-color: #f0f0f0;
+    background-color: #f2f2f2;
 }
 
 .nav-container {
@@ -84,4 +89,45 @@ h1 {
 .tarjeta-content {
     padding: 20px;
     color: white;
+}
+
+@media screen and (max-width: 650px) {
+
+    .nav-container {
+        margin-left: 15px;
+        justify-content: start;
+    }
+    .nav-list
+    {
+        color: #1f8eba;
+    }
+    .nav-item a {
+        padding: 10px 15px;
+        font-size: large;
+        background:  #1f8eba;
+    }
+    h1 {
+        color: #1f8eba;
+        font-size: 1.5em;
+        margin: auto;
+    }
+    .tarjeta-container {
+        width: 100%;
+        margin-top: 15px;
+        justify-content: center;
+    }
+    .tarjeta {
+        justify-content: center;
+        align-items: center;
+        width: 88%;
+        display: flex;
+        flex-direction: column;
+    }
+    .img-tarjeta {
+        margin-top: 15px;
+        width: 210px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
 }

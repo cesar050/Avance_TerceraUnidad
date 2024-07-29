@@ -5,9 +5,11 @@ body {
     padding: 0;
     background-color: #f0f2f5;
 }
-
+.header{
+        background-color: #f0f2f5;
+    }
 .contenedor {
-    background-color: #e3e3e3;
+    background-color: #efefef;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     padding: 2rem;
@@ -25,26 +27,25 @@ body {
 }
 
 .contenedor p {
-    font-size: 1.125rem;
+    font-size: 1.75rem;
     color: #000000;
     line-height: 1.8;
 }
 
 .tab-link {
+    padding: 5px;
     text-decoration: none;
     color: #ffffff;
     display: inline-block;
-    padding: 1rem 2rem;
     border-radius: 25px;
     transition: background-color 0.3s ease, color 0.3s ease;
-    margin: 0.5rem;
     font-weight: 600;
-    background-color: #f6f6f6;
+    background-color: #f9f9f9;
     border: 2px solid #000000;
 }
 
 .tab-link:hover {
-    background-color: #748798;
+    background-color: #c7e1ff;
     border-color: #0056b3;
     color: #ffffff;
 }
@@ -99,7 +100,7 @@ body {
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    font-size: 1.25rem;
+    font-size: 2rem;
     line-height: 1.8;
     margin-top: 2rem;
     border: 2px solid #c82333;
@@ -113,26 +114,35 @@ h2 {
     text-align: center;
 }
 
-@media (max-width: 768px) {
-    .contenedor {
-        padding: 1rem;
-        margin: 1rem;
-    }
 
-    .contenedor h3 {
-        font-size: 1.5rem;
+@media screen and (max-width: 600px) {
+    .header{
+        background-color: #f0f2f5;
     }
-
-    .contenedor p {
-        font-size: 1rem;
+    .content {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 0;
+        max-width: 215px;
     }
+    .contenedor
+    {
+        padding: 1.2rem;
 
-    .tab-link {
-        padding: 0.75rem 1.5rem;
-        font-size: 1rem;
+
     }
 
     .titulo_background {
-        font-size: 3rem;
+        font-size: 2rem;
     }
+
+    .resumen {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
 }

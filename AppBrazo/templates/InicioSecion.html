@@ -2,24 +2,40 @@
 <!DOCTYPE html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Iniciar Sesión</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/inicioSecion.css' %}">
+     <style>
+        body {
+            background: url('{% static "imagenes/fondo4.jpg" %}') no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
 <div class="container">
     <h2>Iniciar Sesión</h2>
-    <form method="post">
+    <form method="post" action="{% url 'InicioSesion' %}">
         {% csrf_token %}
-        {{ form.as_p }}
-        <div class="button-container">
-            <input type="submit" value="Iniciar Sesión">
-            <a href="{% url 'CrearUsuario' %}">
-                <input type="button" value="Crear Usuario">
-            </a>
-            <a href="{% url 'home' %}">
-                <input type="button" value="Home">
-            </a>
-        </div>
+        {{ form.as_p}}
+        <input type="submit" class="button" value="Iniciar Sesión">
     </form>
+
+    <div class="reg-container">
+        <p>No tienes una cuenta?</p>
+        <a href="{% url 'CrearUsuario' %}">
+            <input type="button" class="button3" value="Registrate">
+        </a>
+    </div>
+    <div class="button-container">
+        <a href="{% url 'home' %}">
+            <input type="button" class="button3" value="Home">
+        </a>
+    </div>
+
 </div>
 </body>

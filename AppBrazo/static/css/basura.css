@@ -104,7 +104,6 @@ h2 {
 }
 
 .slider-camara input[type=range]::-webkit-slider
-
 -thumb, .control-brazo input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
