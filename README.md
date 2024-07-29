@@ -4,7 +4,7 @@
  - David Toledo
  - Alexis Jara
  - Marco Chiliguano
- - 
+ - Cesar Lopez
 
 UML PIS 
 ![image](https://github.com/user-attachments/assets/020ed0c4-06e9-4a9e-9af3-fbf38a4e0c1e)
