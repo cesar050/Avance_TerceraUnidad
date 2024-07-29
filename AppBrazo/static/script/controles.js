@@ -18,8 +18,6 @@ const anguloPin = document.getElementById('anguloPin');
 
 const buttonForward = document.getElementById('forward');
 const buttonBackward = document.getElementById('backward');
-const buttonLeft = document.getElementById('left');
-const buttonRight = document.getElementById('right');
 
 let directionValue = {
     forward: 0,
@@ -40,8 +38,7 @@ function fetchGet() {
     formControl.append('pinza', sliderPin.value);
     formControl.append('forward', directionValue.forward);
     formControl.append('backward', directionValue.backward);
-    formControl.append('left', directionValue.left);
-    formControl.append('right', directionValue.right);
+
 
     formControl.append('esp32_ip', document.getElementById('esp32_ip').value);
 
@@ -115,23 +112,6 @@ buttonBackward.addEventListener('mouseup', function() {
     fetchGet();
 });
 
-buttonLeft.addEventListener('mousedown', function() {
-    directionValue.left = 1;
-    fetchGet();
-});
-buttonLeft.addEventListener('mouseup', function() {
-    directionValue.left = 0;
-    fetchGet();
-});
-
-buttonRight.addEventListener('mousedown', function() {
-    directionValue.right = 1;
-    fetchGet();
-});
-buttonRight.addEventListener('mouseup', function() {
-    directionValue.right = 0;
-    fetchGet();
-});
 
 document.addEventListener('keydown', function(event) {
     switch(event.key) {
@@ -172,13 +152,6 @@ document.addEventListener('keyup', function(event) {
             break;
         case 'a':
         case 'A':
-            directionValue.left = 0;
-            fetchGet();
-            break;
-        case 'd':
-        case 'D':
-            directionValue.right = 0;
-            fetchGet();
-            break;
+
     }
 });
