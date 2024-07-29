@@ -1,6 +1,4 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Documentación</title>
@@ -80,6 +78,8 @@
     });
     document.querySelectorAll('.nav-item a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
+        const href= this.getAttribute('href');
+        if(href.charAt(0) === '#')
         e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
