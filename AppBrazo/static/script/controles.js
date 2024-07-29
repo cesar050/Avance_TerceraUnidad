@@ -40,7 +40,8 @@ function fetchGet() {
     formControl.append('backward', directionValue.backward);
 
 
-    formControl.append('esp32_ip', document.getElementById('esp32_ip').value);
+    const esp32_ip = document.getElementById('esp32_ip').value;
+    formControl.append('esp32_ip', esp32_ip);
 
     let parametros = new URLSearchParams(formControl).toString();
     let url = `http://127.0.0.1:8000/control/?${parametros}`;

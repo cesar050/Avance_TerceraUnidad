@@ -58,13 +58,10 @@ def Estadisticas(request):
     return render(request, 'Estadisticas.html', context)
 
 def obtener_datos_servo(request):
-    # Obtener todos los datos de ServoData y ordenarlos por timestamp
     datos_servo = ServoData.objects.all().order_by('-timestamp')
 
-    # Convertir los datos a un formato serializable en JSON
     datos_serializados = list(datos_servo.values(
         'timestamp', 'esp32_ip', 'base', 'hombro', 'codo', 'muneca', 'pinza',
         'camera', 'forward', 'backward', 'left', 'right'
     ))
-    # Devolver los datos como una respuesta JSON
     return JsonResponse(datos_serializados, safe=False)
