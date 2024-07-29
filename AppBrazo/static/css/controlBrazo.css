@@ -99,31 +99,31 @@ label {
 
 .button-up {
     position: absolute;
-    top: 380px;
+    top: 350px;
     left: 215px;
 }
 
 .button-down {
     position: absolute;
-    bottom:80px;
+    bottom:110px;
     left: 215px;
 }
 
 .button-left {
     position: absolute;
     left: 100px;
-    top: 488px;
+    top: 458px;
 }
 
 .button-right {
     position: absolute;
-    right: 950px;
-    top: 488px;
+    right: 1000px;
+    top: 458px;
 }
 #reset {
     position: absolute;
-    top: 600px;
-    left: 1110px;
+    top: 550px;
+    left: 1100px;
 }
 
 
