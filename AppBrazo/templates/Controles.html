@@ -1,82 +1,82 @@
-
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/controles.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/controlBrazo.css' %}">
 
-    <header>
-        <h1>Control</h1>
-    </header>
+<h1>Control</h1>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+<section id="control">
+    <div id="form-container">
+        <form method="get" id="form-control">
+            <label for="esp32_ip">Dirección IP del ESP32:</label>
+            <input type="text" id="esp32_ip" name="esp32_ip" required>
+        </form>
+    </div>
 
-    <section id="control">
-        =<div id="form-container">
-            <form method="get" id="form-control">
-                <label for="esp32_ip">Dirección IP del ESP32:</label>
-                <input type="text" id="esp32_ip" name="esp32_ip" required>
-                <br>
+    <div id="video-stream-container">
+        <video id="video-stream" controls autoplay>
+            <source src="https://www.youtube.com/watch?v=y9LlnLTH87U&ab_channel=CuartetodeNos" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 
-            </form>
-        </div>
-        <div id="video-stream-container">
-            <video id="video-stream" controls autoplay>
-                <source src=" https://www.youtube.com/watch?v=y9LlnLTH87U&ab_channel=CuartetodeNostype=">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-
-        <div id="controls-container">
-            <div id="vision-tools-container">
-                <div id="camera-container">
-                    <div id="camera-slider">
-                        <input type="range" id="camera" name="camera" min="0" max="180" value="90">
-                        <span id="anguloCam">{{ camera }}</span>
-                    </div>
-                    <div id="camera-buttons">
-
-                    </div>
+    <div id="controls-container">
+        <div id="vision-tools-container">
+            <div id="camera-container">
+                <div id="camera-slider">
+                    <input type="range" id="camera" name="camera" min="0" max="180" value="90">
+                    <span id="anguloCam">{{ camera }}</span>
+                </div>
+                <div id="camera-buttons">
+                    <!-- Puedes añadir botones aquí si lo necesitas -->
                 </div>
             </div>
-
-            <div id="control-container">
-                <label for="base">Base:</label>
-                <input type="range" id="base" name="base" min="0" max="180" value="90">
-                <span id="anguloBas">{{ base }}</span>
-
-                <label for="hombro">Hombro:</label>
-                <input type="range" id="hombro" name="hombro" min="0" max="180" value="90">
-                <span id="anguloHom">{{ hombro }}</span>
-
-                <label for="codo">Codo:</label>
-                <input type="range" id="codo" name="codo" min="0" max="180" value="90">
-                <span id="anguloCod">{{ codo }}</span>
-
-                <label for="muneca">Muñeca:</label>
-                <input type="range" id="muneca" name="muneca" min="0" max="180" value="90">
-                <span id="anguloMun">{{ muneca }}</span>
-
-                <label for="pinza">Pinza:</label>
-                <input type="range" id="pinza" name="pinza" min="0" max="180" value="90">
-                <span id="anguloPin">{{ pinza }}</span>
-
-                <div id="car-buttons">
-                    <button id="forward" type="button">
-                        <span class="material-symbols-outlined">Arriba</span>
-                    </button>
-                    <button id="backward" type="button">
-                        <span class="material-symbols-outlined">Abajo</span>
-                    </button>
-                    <button id="right" type="button">
-                        <span class="material-symbols-outlined">Derecha</span>
-                    </button>
-                    <button id="left" type="button">
-                        <span class="material-symbols-outlined">Izquierda</span>
-                    </button>
-                </div>
-
-                <button id="reset" type="reset">Limpiar</button>
-            </div>
         </div>
-    </section>
-    <script src="{% static 'script/controles.js' %}"></script>
+
+        <div id="control-container">
+            <label for="base">Base:</label>
+            <input type="range" id="base" name="base" min="0" max="180" value="90">
+            <span id="anguloBas">{{ base }}</span>
+
+            <label for="hombro">Hombro:</label>
+            <input type="range" id="hombro" name="hombro" min="0" max="180" value="90">
+            <span id="anguloHom">{{ hombro }}</span>
+
+            <label for="codo">Codo:</label>
+            <input type="range" id="codo" name="codo" min="0" max="180" value="90">
+            <span id="anguloCod">{{ codo }}</span>
+
+            <label for="muneca">Muñeca:</label>
+            <input type="range" id="muneca" name="muneca" min="0" max="180" value="90">
+            <span id="anguloMun">{{ muneca }}</span>
+
+            <label for="pinza">Pinza:</label>
+            <input type="range" id="pinza" name="pinza" min="0" max="180" value="90">
+            <span id="anguloPin">{{ pinza }}</span>
+        </div>
+
+        <div id="botones">
+    <div id="car-buttons">
+        <button id="forward" class="button-up" type="button">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <button id="backward" class="button-down" type="button">
+            <i class="fas fa-arrow-down"></i>
+        </button>
+        <button id="right" class="button-right" type="button">
+            <i class="fas fa-arrow-right"></i>
+        </button>
+        <button id="left" class="button-left" type="button">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+    </div>
+    <button id="reset" type="reset">
+        <i class="fas fa-trash-alt"></i> 
+    </button>
+</div>
+    </div>
+</section>
+
+<script src="{% static 'script/controles.js' %}"></script>
 {% endblock %}

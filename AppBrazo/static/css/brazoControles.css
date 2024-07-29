@@ -1,23 +1,220 @@
-#video-stream-container {
+
+
+body {
+    background-image: url("../imagenes/fondonegro.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#control {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+#form-container {
+    margin-right: 20px;
+}
+
+#video-stream-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    position: absolute; /* Agregado para mover el video */
+    top: 80px; /* Ajusta según sea necesario */
+    left: 340px;
+
+}
+
 #video-stream {
-    width: 640px;  /* Ajusta esto a la anchura que desees */
-    height: 360px; /* Ajusta esto a la altura que desees */
-    border: 2px solid darkblue; /* Borde de 2px de grosor, sólido y de color negro */
-    background-color: darkblue; /* Color de fondo amarillo */
+    width: 640px;
+    height: 360px;
+    border: 2px solid ghostwhite;
+    border-image-source: linear-gradient(to right, white, skyblue);
+    border-image-slice: 1;
     border-radius: 10px;
 }
+
+#controls-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+#vision-tools-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#camera-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#camera-slider {
+    margin-bottom: 20px;
+     position: absolute; /* Agregado para mover el slider */
+     top: 90px; /* Ajusta según sea necesario */
+     left: 1185px;
+}
+
+#camera-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#control-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute; /* Agregado para mover el div */
+    top: 100px; /* Ajusta según sea necesario */
+    left: 1185px;
+}
+
+#car-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+button {
+    background: linear-gradient(to bottom, #f0f0f0 0%, #dcdcdc 100%);
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+    padding: 20px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    background: linear-gradient(to bottom, white 0%, skyblue 100%);
+    border: 2px skyblue;
+}
+
+button:active {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2) inset;
+}
+
+input[type=range] {
+    width: 100%;
+    height: 25px;
+    background: transparent; /* Sin fondo */
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+
+input[type=range]:hover {
+    opacity: 1;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: linear-gradient(to right, white, skyblue);
+    border-radius: 1.3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: black; /* Negro para el pulgar */
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -7.5px;
+    border: none;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: #4CAF50; /* Verde oscuro */
+    border-radius: 1.3px;
+}
+
+input[type=range]::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: black; /* Negro para el pulgar */
+    cursor: pointer;
+}
+
+#forward {
+    position: relative;
+    top: -210px;
+    right: 550px;
+}
+
+#backward {
+    position: relative;
+    top: -130px;
+    right: 550px;
+}
+
+#left {
+    position: relative;
+    top: -370px;
+    right: 625px;
+}
+
+#right {
+    position: relative;
+    top: -295px;
+    right: 475px;
+}
+label {
+    color: white; /* Color blanco para el texto */
+    font-size: 15px; /* Aumentar tamaño de la fuente */
+    margin-bottom: 15px; /* Separación entre las etiquetas */
+}
+
 #reset {
-    float: right;
-     margin-bottom: 20px;
-
+    position: absolute;
+    top: 450px; /* Ajusta según sea necesario */
+    right: 10px; /* Ajusta según sea necesario */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-body {
-    background-color: #5D6D7E ;
-    color: #ffffff; /* Color del texto negro por defecto */
+
+#control {
+    position: relative; /* Agregado para posicionar los elementos hijos absolutamente */
 }
 
-
+#form-container {
+    position: absolute; /* Agregado para mover el campo "Dirección IP del ESP32" */
+    top: 45px; /* Ajusta según sea necesario */
+    left: 365px; /* Ajusta según sea necesario */
+}
