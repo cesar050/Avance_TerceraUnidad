@@ -7,7 +7,8 @@
  - Cesar Lopez
 
 UML PIS 
-![image](https://github.com/user-attachments/assets/020ed0c4-06e9-4a9e-9af3-fbf38a4e0c1e)
+
+![1](https://github.com/user-attachments/assets/19760ab0-1d19-401f-8c42-f2586b107923)
 
 Funcionamiento de ESP32
 
