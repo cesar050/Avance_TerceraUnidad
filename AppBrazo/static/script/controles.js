@@ -1,44 +1,30 @@
-const sliderCam = document.getElementById('camera');
-const anguloCam = document.getElementById('anguloCam');
+const sliders = {
+    camera: { slider: document.getElementById('camera'), angle: document.getElementById('anguloCam') },
+    base: { slider: document.getElementById('base'), angle: document.getElementById('anguloBas') },
+    hombro: { slider: document.getElementById('hombro'), angle: document.getElementById('anguloHom') },
+    codo: { slider: document.getElementById('codo'), angle: document.getElementById('anguloCod') },
+    muneca: { slider: document.getElementById('muneca'), angle: document.getElementById('anguloMun') },
+    pinza: { slider: document.getElementById('pinza'), angle: document.getElementById('anguloPin') }
+};
 
-const sliderBas = document.getElementById('base');
-const anguloBas = document.getElementById('anguloBas');
-
-const sliderHom = document.getElementById('hombro');
-const anguloHom = document.getElementById('anguloHom');
-
-const sliderCod = document.getElementById('codo');
-const anguloCod = document.getElementById('anguloCod');
-
-const sliderMun = document.getElementById('muneca');
-const anguloMun = document.getElementById('anguloMun');
-
-const sliderPin = document.getElementById('pinza');
-const anguloPin = document.getElementById('anguloPin');
-
-const buttonForward = document.getElementById('forward');
-const buttonBackward = document.getElementById('backward');
-
-let directionValue = {
+const directionValue = {
     forward: 0,
     backward: 0,
     left: 0,
     right: 0
 };
 
+const buttonForward = document.getElementById('forward');
+const buttonBackward = document.getElementById('backward');
 const reset = document.getElementById('reset');
 
 function fetchGet() {
-    let formControl = new FormData(document.getElementById('form-control'));
-    formControl.append('camera', sliderCam.value);
-    formControl.append('base', sliderBas.value);
-    formControl.append('hombro', sliderHom.value);
-    formControl.append('codo', sliderCod.value);
-    formControl.append('muneca', sliderMun.value);
-    formControl.append('pinza', sliderPin.value);
+    let formControl = new FormData();
+    for (let key in sliders) {
+        formControl.append(key, sliders[key].slider.value);
+    }
     formControl.append('forward', directionValue.forward);
     formControl.append('backward', directionValue.backward);
-
 
     const esp32_ip = document.getElementById('esp32_ip').value;
     formControl.append('esp32_ip', esp32_ip);
@@ -65,33 +51,23 @@ function fetchGet() {
     console.log(url);
 }
 
-let sliders = [sliderCam, sliderBas, sliderHom, sliderCod, sliderMun, sliderPin];
-
-function updateSliderValue(slider, angulo) {
-    slider.addEventListener('input', function() {
-        angulo.textContent = slider.value;
-    });
-    angulo.textContent = slider.value;
-}
-
-updateSliderValue(sliderCam, anguloCam);
-updateSliderValue(sliderBas, anguloBas);
-updateSliderValue(sliderHom, anguloHom);
-updateSliderValue(sliderCod, anguloCod);
-updateSliderValue(sliderMun, anguloMun);
-updateSliderValue(sliderPin, anguloPin);
-
-sliders.forEach(slider => {
-    slider.addEventListener('input', function() {
+function updateSliderValue(sliderObj) {
+    sliderObj.slider.addEventListener('input', function() {
+        sliderObj.angle.textContent = sliderObj.slider.value;
         fetchGet();
     });
-});
+    sliderObj.angle.textContent = sliderObj.slider.value;
+}
+
+for (let key in sliders) {
+    updateSliderValue(sliders[key]);
+}
 
 reset.addEventListener('click', function() {
-    sliders.forEach(slider => {
-        slider.value = 90;
-        document.getElementById(`angulo${slider.id.charAt(0).toUpperCase() + slider.id.slice(1)}`).textContent = 90;
-    });
+    for (let key in sliders) {
+        sliders[key].slider.value = 90;
+        sliders[key].angle.textContent = 90;
+    }
     fetchGet();
 });
 
@@ -113,26 +89,21 @@ buttonBackward.addEventListener('mouseup', function() {
     fetchGet();
 });
 
-
 document.addEventListener('keydown', function(event) {
-    switch(event.key) {
+    switch(event.key.toLowerCase()) {
         case 'w':
-        case 'W':
             directionValue.forward = 1;
             fetchGet();
             break;
         case 's':
-        case 'S':
             directionValue.backward = 1;
             fetchGet();
             break;
         case 'a':
-        case 'A':
             directionValue.left = 1;
             fetchGet();
             break;
         case 'd':
-        case 'D':
             directionValue.right = 1;
             fetchGet();
             break;
@@ -140,19 +111,22 @@ document.addEventListener('keydown', function(event) {
 });
 
 document.addEventListener('keyup', function(event) {
-    switch(event.key) {
+    switch(event.key.toLowerCase()) {
         case 'w':
-        case 'W':
             directionValue.forward = 0;
             fetchGet();
             break;
         case 's':
-        case 'S':
             directionValue.backward = 0;
             fetchGet();
             break;
         case 'a':
-        case 'A':
-
+            directionValue.left = 0;
+            fetchGet();
+            break;
+        case 'd':
+            directionValue.right = 0;
+            fetchGet();
+            break;
     }
 });
