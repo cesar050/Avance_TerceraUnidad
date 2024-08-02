@@ -1,4 +1,4 @@
-const sliders = {
+const Slider = {
     camera: { slider: document.getElementById('camera'), angle: document.getElementById('anguloCam') },
     base: { slider: document.getElementById('base'), angle: document.getElementById('anguloBas') },
     hombro: { slider: document.getElementById('hombro'), angle: document.getElementById('anguloHom') },
@@ -20,8 +20,8 @@ const reset = document.getElementById('reset');
 
 function fetchGet() {
     let formControl = new FormData();
-    for (let key in sliders) {
-        formControl.append(key, sliders[key].slider.value);
+    for (let key in Slider) {
+        formControl.append(key, Slider[key].slider.value);
     }
     formControl.append('forward', directionValue.forward);
     formControl.append('backward', directionValue.backward);
@@ -59,14 +59,14 @@ function updateSliderValue(sliderObj) {
     sliderObj.angle.textContent = sliderObj.slider.value;
 }
 
-for (let key in sliders) {
-    updateSliderValue(sliders[key]);
+for (let key in Slider) {
+    updateSliderValue(Slider[key]);
 }
 
 reset.addEventListener('click', function() {
-    for (let key in sliders) {
-        sliders[key].slider.value = 90;
-        sliders[key].angle.textContent = 90;
+    for (let key in Slider) {
+        Slider[key].slider.value = 90;
+        Slider[key].angle.textContent = 90;
     }
     fetchGet();
 });
